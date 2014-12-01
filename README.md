@@ -9,6 +9,12 @@ Setup
 ```bash
 $ git clone https://github.com/srobbibaro/.vim.git
 $ ln -s .vim/vimrc ~/.vimrc
-$ ln -s .vim/ ~/.vim
 $ mkdir ~/tmp
+$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+$ vim +PluginInstall +qall
 ```
+
+References
+----------
+
+Vundle: https://github.com/gmarik/Vundle.vim
