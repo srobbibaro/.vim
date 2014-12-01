@@ -1,8 +1,8 @@
 set nocompatible
 
 " Set the runtime path to include Vundle and initialize
-set rtp+=~/github/.vim/vundle-bundle/Vundle.vim
-call vundle#begin('~/github/.vim/vundle-bundle')
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin('~/.vim/bundle')
 
 " Let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
