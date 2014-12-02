@@ -19,8 +19,10 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/grep.vim'
 Plugin 'camelcasemotion'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'sjl/badwolf'
+if version >= 73584
+  Plugin 'Valloric/YouCompleteMe'
+endif
 
 " All of your Plugins must be added before the following line
 call vundle#end()
