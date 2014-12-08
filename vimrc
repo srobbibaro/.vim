@@ -60,7 +60,7 @@ filetype plugin indent on
 " General settings
 set number
 set ruler
-set ic
+set smartcase
 set hidden
 set autoread
 set scrolloff=3
