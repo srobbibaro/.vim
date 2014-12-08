@@ -95,6 +95,9 @@ map <Leader>cd :cd %:p:h<CR>
 " Search highlight toggle
 nnoremap <F2> :set hlsearch!<CR>
 
+" Check spelling toggle
+nnoremap <F9> :set spell!<CR>
+
 " Bind Ctrl-PageUp/PageDown to move next/previous tabs
 nmap <silent> <C-PageDown> gt
 nmap <silent> <C-PageUp> gT
