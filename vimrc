@@ -64,6 +64,7 @@ set ic
 set hidden
 set autoread
 set scrolloff=3
+set mouse=a
 
 " File type detection and indenting
 filetype off
