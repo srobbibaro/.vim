@@ -129,16 +129,13 @@ let g:ctrlp_cmd = 'CtrlP'
 nmap <silent> <Leader>nt :NERDTreeToggle<CR>
 nmap <silent> <Leader>ntf :NERDTreeFind<CR>
 
-set listchars=tab:>-,trail:·,eol:$
-nmap <silent> <leader>s :set nolist!<CR>
-
 " Catch trailing whitespace
+nmap <silent> <leader>s :set nolist!<CR>
 set list listchars=trail:.,tab:>>
 
 nmap <silent> <leader><space> :call TrimSpaces()<CR>
 
 function! TrimSpaces()
   %s/\s*$//
-  %s/\t/  /g
   ''
 endfunction
