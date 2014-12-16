@@ -125,6 +125,8 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<leader>p'
 let g:ctrlp_cmd = 'CtrlP'
 
+runtime macros/matchit.vim
+
 " Set Nerdtree bindings
 nmap <silent> <Leader>nt :NERDTreeToggle<CR>
 nmap <silent> <Leader>ntf :NERDTreeFind<CR>
