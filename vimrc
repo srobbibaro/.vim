@@ -113,10 +113,6 @@ nnoremap <F9> :set spell!<CR>
 nmap <silent> <C-PageDown> gt
 nmap <silent> <C-PageUp> gT
 
-" Use common regex syntax in searches
-nnoremap / /v
-vnoremap / /v
-
 " Markdown highlighting
 augroup mkd
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
