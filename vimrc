@@ -60,17 +60,22 @@ let g:session_autosave = "no"
 let g:session_autoload = "no"
 
 " Set file type detection and indenting
-filetype off
+filetype on
 filetype plugin indent on
 
 " General settings
 set number
 set ruler
+set ignorecase
 set smartcase
 set hidden
 set autoread
 set scrolloff=3
 set mouse=a
+set modelines=0
+set visualbell
+set noerrorbells
+set laststatus=2
 
 " File type detection and indenting
 filetype off
@@ -84,7 +89,7 @@ set nofoldenable
 set foldlevel=1
 
 " Set tabs to 2 spaces, soft
-set tabstop=2 shiftwidth=2 expandtab
+set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 " Show indicator for 80 charaters in a column
 let &colorcolumn=80
@@ -108,10 +113,28 @@ nnoremap <F9> :set spell!<CR>
 nmap <silent> <C-PageDown> gt
 nmap <silent> <C-PageUp> gT
 
+" Use common regex syntax in searches
+nnoremap / /v
+vnoremap / /v
+
 " Markdown highlighting
 augroup mkd
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
 augroup END
+
+" Turn on spell check for certain file types
+autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
+autocmd BufRead,BufNewFile *.txt setlocal spell spelllang=en_us
+autocmd FileType gitcommit setlocal spell spelllang=en_us
+
+" Autowrap text to 80 chars for certain filetypes
+autocmd FileType gitcommit setlocal textwidth=80
+
+" Allow saving with sudo
+cmap w!! w !sudo tee % >/dev/null
+
+" Toggle paste mode
+nmap <leader>o :set paste!<CR>
 
 " Indent guides settings
 let g:indent_guides_start_level = 2
@@ -148,9 +171,9 @@ nmap <silent> <Leader>ntf :NERDTreeFind<CR>
 
 " Catch trailing whitespace
 nmap <silent> <leader>s :set nolist!<CR>
-set list listchars=trail:.,tab:>>
+set list listchars=tab:>-,trail:.,extends:#,nbsp:.
 
-nmap <silent> <leader><space> :call TrimSpaces()<CR>
+nnoremap <silent> <leader><space> :call TrimSpaces()<CR>
 
 function! TrimSpaces()
   %s/\s*$//
