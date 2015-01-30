@@ -32,7 +32,9 @@ call vundle#end()
 filetype plugin indent on
 
 " Set color scheme
-set t_Co=256
+if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+  set t_Co=256
+endif
 syntax enable
 colorscheme badwolf
 
