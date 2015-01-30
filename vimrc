@@ -18,8 +18,11 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/grep.vim'
+Plugin 'vim-scripts/scratch.vim'
 Plugin 'camelcasemotion'
 Plugin 'sjl/badwolf'
+Plugin 'skalnik/vim-vroom'
+Plugin 'FelikZ/ctrlp-py-matcher'
 if version >= 73584
   Plugin 'Valloric/YouCompleteMe'
 endif
@@ -121,9 +124,18 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 " Set CtrlP settings
+if has('python')
+  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+endif
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<leader>p'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|ogg|)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
+" Do not clear filenames cache, to improve CtrlP startup
+" You can manualy clear it by <F5>
+let g:ctrlp_clear_cache_on_exit = 0
+" Set no file limit, we are building a big project
+let g:ctrlp_max_files = 0
 
 runtime macros/matchit.vim
 
