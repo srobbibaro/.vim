@@ -50,9 +50,10 @@ if has("gui_running")
 endif
 
 " Change location of backup directory
-set swapfile
+set noswapfile
+set nobackup
 set backupdir=~/tmp
-set dir=~/tmp
+set dir=~/tmp,/tmp
 
 " Set session.vim settings
 let g:session_autosave = "no"
