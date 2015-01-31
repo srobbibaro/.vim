@@ -29,7 +29,6 @@ endif
 
 " All of your Plugins must be added before the following line
 call vundle#end()
-filetype plugin indent on
 
 " Set color scheme
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
@@ -58,10 +57,6 @@ set dir=~/tmp,/tmp
 " Set session.vim settings
 let g:session_autosave = "no"
 let g:session_autoload = "no"
-
-" Set file type detection and indenting
-filetype on
-filetype plugin indent on
 
 " General settings
 set number
