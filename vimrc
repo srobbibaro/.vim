@@ -67,9 +67,6 @@ set hidden
 set autoread
 set scrolloff=3
 set mouse=a
-set modelines=0
-set visualbell
-set noerrorbells
 set laststatus=2
 
 " File type detection and indenting
