@@ -157,6 +157,12 @@ nmap <silent> <Leader>nt :NERDTreeToggle<CR>
 nmap <silent> <Leader>ntf :NERDTreeFind<CR>
 let g:NERDTreeDirArrows=0
 
+" Quick fix bindings
+nmap <silent> <Leader>co :copen<CR>
+nmap <silent> <Leader>cc :cclose<CR>
+nmap <silent> <Leader>cn :cnext<CR>
+nmap <silent> <Leader>cp :cprev<CR>
+
 " Catch trailing whitespace
 nmap <silent> <leader>s :set nolist!<CR>
 set list listchars=tab:>-,trail:.,extends:#,nbsp:.
