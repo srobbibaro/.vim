@@ -144,7 +144,7 @@ let g:ctrlp_cmd = 'CtrlP'
 if has('python')
   let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 endif
-let g:ctrlp_custom_ignore = '\.git$\|\.o$\|\.app$\|\.csv\|tags\|public\/images$\|public\/uploads$\|log\|tmp$\|source_maps\|app\/assets\/images\|test\/reports\|node_modules\|bower_components\|dist'
+let g:ctrlp_custom_ignore = '\.git$\|\.o$\|\.app$\|\.csv\|\.jpg$\|\.png$\|\.class$\|tags\|public\/images$\|public\/uploads$\|log\|tmp$\|source_maps\|app\/assets\/images\|test\/reports\|node_modules\|bower_components\|dist\|bin\|gen'
 " Do not clear filenames cache, to improve CtrlP startup
 " You can manualy clear it by <F5>
 let g:ctrlp_clear_cache_on_exit = 0
