@@ -133,6 +133,8 @@ let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'calendar']
 " Set Syntastic ruby settings
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_java_checkers = ['javac']
+let g:syntastic_java_javac_config_file_enabled = 1
 let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
