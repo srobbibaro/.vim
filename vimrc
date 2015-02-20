@@ -183,6 +183,11 @@ set list listchars=tab:>-,trail:.,extends:#,nbsp:.
 
 nnoremap <silent> <leader><space> :call TrimSpaces()<CR>
 
+" Include user's local vim config
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
+
 function! TrimSpaces()
   %s/\s*$//
   ''
