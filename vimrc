@@ -130,12 +130,21 @@ let g:indent_guides_guide_size = 1
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'calendar']
 
-" Set Syntastic ruby settings
+" Set Syntastic checkers
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+let g:syntastic_scss_checkers = ['scss_lint']
+let g:syntastic_coffee_checkers = ['coffeelint']
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_java_checkers = ['javac']
 let g:syntastic_java_javac_config_file_enabled = 1
-let g:syntastic_quiet_messages = {'level': 'warnings'}
+let g:syntastic_haml_checkers = ['haml']
+let g:syntastic_json_checkers = ['jsonlint']
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
