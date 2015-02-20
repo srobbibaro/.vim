@@ -171,6 +171,12 @@ nmap <silent> <Leader>cc :cclose<CR>
 nmap <silent> <Leader>cn :cnext<CR>
 nmap <silent> <Leader>cp :cprev<CR>
 
+" vim-fugitive bindings
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gl :Glog<CR>
+
 " Catch trailing whitespace
 nmap <silent> <leader>s :set nolist!<CR>
 set list listchars=tab:>-,trail:.,extends:#,nbsp:.
