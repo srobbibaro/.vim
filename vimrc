@@ -67,6 +67,18 @@ set hidden
 set autoread
 set scrolloff=3
 set mouse=a
+
+" Setup status line
+set statusline=[%t]
+set statusline+=%*
+set statusline+=%{fugitive#statusline()}
+set statusline+=%*
+set statusline+=%c,
+set statusline+=%l/%L
+set statusline+=%*
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 set laststatus=2
 
 " File type detection and indenting
@@ -140,9 +152,6 @@ let g:syntastic_java_javac_config_file_enabled = 1
 let g:syntastic_haml_checkers = ['haml']
 let g:syntastic_json_checkers = ['jsonlint']
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
