@@ -127,6 +127,10 @@ autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
 autocmd BufRead,BufNewFile *.txt setlocal spell spelllang=en_us
 autocmd FileType gitcommit setlocal spell spelllang=en_us
 
+" Set ant as java compiler
+autocmd BufRead *.java compiler ant
+autocmd BufRead set makeprg=ant\ -find\ build.xml
+
 " Autowrap text to 80 chars for certain filetypes
 autocmd FileType gitcommit setlocal textwidth=80
 
