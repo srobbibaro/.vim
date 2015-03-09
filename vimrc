@@ -142,7 +142,7 @@ autocmd BufRead set makeprg=ant\ -find\ build.xml
 autocmd FileType gitcommit setlocal textwidth=80
 
 " Allow saving with sudo
-cmap w!! w !sudo tee % >/dev/null
+cmap W!! w !sudo tee % >/dev/null
 
 " Toggle paste mode
 nmap <leader>o :set paste!<CR>
