@@ -197,6 +197,9 @@ nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gl :Glog<CR>
 
+" Perl-like regex syntax by default
+noremap / /\v
+
 " Catch trailing whitespace
 nmap <silent> <leader>s :set nolist!<CR>
 set list listchars=tab:>-,trail:.,extends:#,nbsp:.
