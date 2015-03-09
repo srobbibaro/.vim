@@ -25,6 +25,7 @@ Plugin 'skalnik/vim-vroom'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'benmills/vimux'
+Plugin 'terryma/vim-multiple-cursors'
 if version >= 73584
   Plugin 'Valloric/YouCompleteMe'
 endif
