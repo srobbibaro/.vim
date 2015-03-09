@@ -23,6 +23,7 @@ Plugin 'camelcasemotion'
 Plugin 'sjl/badwolf'
 Plugin 'skalnik/vim-vroom'
 Plugin 'FelikZ/ctrlp-py-matcher'
+Plugin 'christoomey/vim-tmux-navigator'
 if version >= 73584
   Plugin 'Valloric/YouCompleteMe'
 endif
@@ -112,6 +113,12 @@ nnoremap <F2> :set hlsearch!<CR>
 
 " Check spelling toggle
 nnoremap <F9> :set spell!<CR>
+
+" Simplify split navigation
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
 
 " Bind Ctrl-PageUp/PageDown to move next/previous tabs
 nmap <silent> <C-PageDown> gt
