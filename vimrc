@@ -24,6 +24,7 @@ Plugin 'sjl/badwolf'
 Plugin 'skalnik/vim-vroom'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'benmills/vimux'
 if version >= 73584
   Plugin 'Valloric/YouCompleteMe'
 endif
@@ -167,6 +168,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+
+" Vroom
+let g:vroom_use_vimux = 1
 
 " Set CtrlP settings
 set runtimepath^=~/.vim/bundle/ctrlp.vim
