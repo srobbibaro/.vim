@@ -26,6 +26,8 @@ Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'benmills/vimux'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'bling/vim-airline'
 if version >= 73584
   Plugin 'Valloric/YouCompleteMe'
 endif
