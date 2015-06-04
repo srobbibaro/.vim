@@ -30,6 +30,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'jceb/vim-orgmode'
 if version >= 73584
   Plugin 'Valloric/YouCompleteMe'
 endif
