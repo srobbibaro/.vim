@@ -137,6 +137,7 @@ augroup mkd
 augroup END
 
 " Turn on spell check for certain file types
+set complete+=kspell
 autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
 autocmd BufRead,BufNewFile *.txt setlocal spell spelllang=en_us
 autocmd FileType gitcommit setlocal spell spelllang=en_us
