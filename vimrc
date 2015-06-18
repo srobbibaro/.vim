@@ -39,7 +39,7 @@ endif
 call vundle#end()
 
 " Set color scheme
-if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal" || $COLORTERM == "xfce4-terminal"
   set t_Co=256
 endif
 syntax enable
