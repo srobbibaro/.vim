@@ -189,6 +189,7 @@ if has('python')
 endif
 set wildignore+=*.png,*.jpg,*.pdf,*.swf
 let g:ctrlp_custom_ignore = '\.git$\|\.o$\|\.app$\|\.csv\|\.class$\|tags\|public\/images$\|public\/uploads$\|log\|tmp$\|source_maps\|app\/assets\/images\|test\/reports\|node_modules\|bower_components\|dist\|bin\|gen'
+nnoremap <leader>tp :CtrlPTag<cr>
 
 runtime macros/matchit.vim
 
