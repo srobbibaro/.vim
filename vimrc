@@ -195,7 +195,7 @@ runtime macros/matchit.vim
 
 " Set Nerdtree bindings
 nmap <silent> <Leader>nt :NERDTreeToggle<CR>
-nmap <silent> <Leader>ntf :NERDTreeFind<CR>
+nmap <silent> <Leader>nf :NERDTreeFind<CR>
 let g:NERDTreeDirArrows=0
 
 " Quick fix bindings
