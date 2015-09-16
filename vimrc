@@ -32,6 +32,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'jceb/vim-orgmode'
+Plugin 'majutsushi/tagbar.git'
 if version >= 73584
   Plugin 'Valloric/YouCompleteMe'
 endif
@@ -197,6 +198,9 @@ runtime macros/matchit.vim
 nmap <silent> <Leader>nt :NERDTreeToggle<CR>
 nmap <silent> <Leader>nf :NERDTreeFind<CR>
 let g:NERDTreeDirArrows=0
+
+" Set Tagbar bindings
+nmap <silent> <Leader>tb :TagbarToggle<CR>
 
 " Quick fix bindings
 nmap <silent> <Leader>co :copen<CR>
