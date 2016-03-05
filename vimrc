@@ -33,6 +33,7 @@ Plugin 'bling/vim-airline'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'jceb/vim-orgmode'
 Plugin 'majutsushi/tagbar.git'
+Plugin 'elixir-lang/vim-elixir'
 if version >= 73584
   Plugin 'Valloric/YouCompleteMe'
 endif
