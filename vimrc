@@ -16,7 +16,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-abolish.git',
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'kien/ctrlp.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/grep.vim'
 Plugin 'vim-scripts/scratch.vim'
@@ -24,7 +23,6 @@ Plugin 'vim-scripts/EasyGrep'
 Plugin 'camelcasemotion'
 Plugin 'sjl/badwolf'
 Plugin 'skalnik/vim-vroom'
-Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'benmills/vimux'
 Plugin 'terryma/vim-multiple-cursors'
@@ -34,9 +32,9 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'jceb/vim-orgmode'
 Plugin 'majutsushi/tagbar.git'
 Plugin 'elixir-lang/vim-elixir'
-if version >= 73584
-  Plugin 'Valloric/YouCompleteMe'
-endif
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -112,6 +110,9 @@ let &colorcolumn=80
 " Set leader key
 let mapleader = ","
 
+" Perl-like regex syntax by default
+noremap / /\v
+
 " Yank to platform clipboard
 map <leader>y "*y
 
@@ -182,18 +183,8 @@ let g:syntastic_check_on_wq = 0
 " Vroom
 let g:vroom_use_vimux = 1
 
-" Set CtrlP settings
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_map = '<leader>p'
-let g:ctrlp_cmd = 'CtrlP'
-if has('python')
-  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-endif
-set wildignore+=*.png,*.jpg,*.pdf,*.swf
-let g:ctrlp_custom_ignore = '\.git$\|\.o$\|\.app$\|\.csv\|\.class$\|tags\|public\/images$\|public\/uploads$\|log\|tmp$\|source_maps\|app\/assets\/images\|test\/reports\|node_modules\|bower_components\|dist\|bin\|gen'
-nnoremap <leader>tp :CtrlPTag<cr>
-
-runtime macros/matchit.vim
+" Fuzzy matcher settings
+nmap <leader>p :FZF<CR>
 
 " Set Nerdtree bindings
 nmap <silent> <Leader>nt :NERDTreeToggle<CR>
@@ -219,7 +210,6 @@ nnoremap <leader>gl :Glog<CR>
 noremap / /\v
 
 " Catch trailing whitespace
-nmap <silent> <leader>s :set nolist!<CR>
 set list listchars=tab:>-,trail:.,extends:#,nbsp:.
 
 nnoremap <silent> <leader><space> :call TrimSpaces()<CR>
@@ -233,3 +223,17 @@ function! TrimSpaces()
   %s/\s*$//
   ''
 endfunction
+
+let g:deoplete#enable_at_startup = 1
+if !exists('g:deoplete#omni#input_patterns')
+  let g:deoplete#omni#input_patterns = {}
+endif
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+
+augroup omnifuncs
+  autocmd!
+  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+augroup end
