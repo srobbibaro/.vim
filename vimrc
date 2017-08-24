@@ -1,5 +1,8 @@
 set nocompatible
 
+let g:python2_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin('~/.vim/bundle')
@@ -35,6 +38,10 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plugin 'jreybert/vimagit'
+Plugin 'lambdalisue/vim-gita'
+Plugin 'neovim/node-host', { 'do': 'npm install' }
+Plugin 'vimlab/mdown.vim', { 'do': 'npm install' }
 
 " All of your Plugins must be added before the following line
 call vundle#end()
