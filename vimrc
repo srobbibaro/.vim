@@ -39,9 +39,6 @@ Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plugin 'jreybert/vimagit'
-Plugin 'lambdalisue/vim-gita'
-Plugin 'neovim/node-host', { 'do': 'npm install' }
-Plugin 'vimlab/mdown.vim', { 'do': 'npm install' }
 
 " All of your Plugins must be added before the following line
 call vundle#end()
