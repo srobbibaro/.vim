@@ -9,7 +9,6 @@ call vundle#begin('~/.vim/bundle')
 
 " Let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Plugin 'slim-template/vim-slim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'scrooloose/nerdtree'
@@ -20,21 +19,11 @@ Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-abolish.git',
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'vim-scripts/grep.vim'
-Plugin 'vim-scripts/scratch.vim'
-Plugin 'vim-scripts/EasyGrep'
-Plugin 'camelcasemotion'
 Plugin 'sjl/badwolf'
-Plugin 'skalnik/vim-vroom'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'benmills/vimux'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'jceb/vim-orgmode'
-Plugin 'majutsushi/tagbar.git'
-Plugin 'elixir-lang/vim-elixir'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -184,9 +173,6 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
-" Vroom
-let g:vroom_use_vimux = 1
-
 " Fuzzy matcher settings
 nmap <leader>p :FZF<CR>
 
@@ -194,9 +180,6 @@ nmap <leader>p :FZF<CR>
 nmap <silent> <Leader>nt :NERDTreeToggle<CR>
 nmap <silent> <Leader>nf :NERDTreeFind<CR>
 let g:NERDTreeDirArrows=0
-
-" Set Tagbar bindings
-nmap <silent> <Leader>tb :TagbarToggle<CR>
 
 " Quick fix bindings
 nmap <silent> <Leader>co :copen<CR>
