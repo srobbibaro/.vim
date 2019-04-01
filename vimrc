@@ -197,7 +197,7 @@ nnoremap <leader>gl :Glog<CR>
 noremap / /\v
 
 " Catch trailing whitespace
-set list listchars=tab:>-,trail:.,extends:#,nbsp:.
+set list listchars=eol:$,tab:>-,trail:.,extends:#,nbsp:.
 
 nnoremap <silent> <leader><space> :call TrimSpaces()<CR>
 
